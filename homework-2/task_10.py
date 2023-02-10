@@ -19,10 +19,19 @@ def getRandomNumbers(numberOfCoins):
     
     return coins
 
-def getTheMinAmount(coins):
+def getTheMinAmount(listCoins):
 
-    numberOfTails = coins.count(1)
-    numberOfHeads = coins.count(0)
+    numberOfTails = 0
+    numberOfHeads = 0
+
+    for coin in listCoins:
+        if coin == 0:
+            numberOfTails += 1
+        else:
+            numberOfHeads += 1
+
+    # numberOfTails = listCoins.count(1)
+    # numberOfHeads = listCoins.count(0)
 
     if numberOfTails < numberOfHeads:
         return print(f"Минимальное количество монеток, которое нужно перевернуть: {numberOfTails}")
