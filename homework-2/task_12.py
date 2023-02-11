@@ -8,9 +8,29 @@
 
 import random
 
-# numberX = random.randrange(1000)
-# numberY = random.randrange(1000)
+x = random.randrange(1000)
+y = random.randrange(1000)
 
-numberX = 5
-numberY = 6
+print(f"Задуманное число X: {x}, задуманное число Y: {y}")
 
+def getHints(x, y):
+
+    s = x + y 
+    p = x * y
+
+    return s, p
+
+def getTheHiddenNumbers(s, p):
+
+    i = 1
+    while i <= s:
+        n = s - i
+        if n * i == p:
+            return i, n
+
+        i += 1
+
+s, p = getHints(x, y)
+result1, result2 = getTheHiddenNumbers(s, p)
+print(f"Подсказка: сумма чисел = {s}, произведение чисел = {p}")
+print(f"Ответ: число X = {result1}, число Y = {result2}")
