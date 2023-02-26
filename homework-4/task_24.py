@@ -13,23 +13,6 @@
 
 from random import randint
 
-# numberOfBushes = int(input("Введите количество кустов черники: "))
-
-# # numberOfBerries = [randint(1, 100) for _ in range(numberOfBushes)]
-# numberOfBerries = [1,9,1,5,5,10]
-# print(numberOfBerries)
-
-# maxNumberOfBushes = max(numberOfBerries)
-
-# indexNumberOfBushes = numberOfBerries.index(maxNumberOfBushes)
-# numberOnTheLeft = numberOfBerries[indexNumberOfBushes - 1]
-# numberOnTheRight = numberOfBerries[indexNumberOfBushes + 1]
-
-# sumOfBerries = maxNumberOfBushes + numberOnTheLeft + numberOnTheRight
-# print(sumOfBerries)
-
-
-
 numberOfBushes = int(input("Введите количество кустов черники: "))
 
 numberOfBerries = [randint(1, 100) for _ in range(numberOfBushes)]
